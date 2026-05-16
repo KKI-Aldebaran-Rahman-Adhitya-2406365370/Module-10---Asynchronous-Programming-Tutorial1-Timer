@@ -119,9 +119,21 @@ fn main() {
         println!("Aldebaran's Komputer: done!");
     });
 
+    spawner.spawn(async {
+        println!("Aldebaran's Komputer: howdy2!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Aldebaran's Komputer: done2!");
+    });
+
+    spawner.spawn(async {
+        println!("Aldebaran's Komputer: howdy3!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Aldebaran's Komputer: done3!");
+    });
+
     println!("Aldebaran's Komputer: hey hey");
 
-    drop(spawner);
+    // drop(spawner); Uncommenting this prevents the terminal from running indefinitely
 
     executor.run();
 }
