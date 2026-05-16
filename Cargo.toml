@@ -1,0 +1,7 @@
+[package]
+name = "Module-10---Asynchronous-Programming-Tutorial1-Timer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+futures = "0.3"
